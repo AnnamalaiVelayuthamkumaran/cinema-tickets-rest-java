@@ -8,4 +8,6 @@ public final class CinemaConstants {
     public static final String MINIMUM_TICKET = "Minimum of 1 tickets needs to be purchased";
     public static final String TICKET_COUNT_NEGATIVE = "Ticket Count cannot be negative";
     public static final Long ACCOUNT_ID = 123L;
+    public static final String INVALID_TICKET_TYPE = "Ticket Type is InValid";
+    public static final String EMPTY_REQUEST = "Ticket request can't be null or Empty";
 }
