@@ -1,18 +1,11 @@
 package uk.gov.dwp.engineering.recruitment;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.dwp.engineering.recruitment.domain.Booking;
 import uk.gov.dwp.engineering.recruitment.domain.BookingConfirmation;
 import uk.gov.dwp.engineering.recruitment.domain.TicketRequest;
 import uk.gov.dwp.engineering.recruitment.domain.TicketType;
@@ -21,15 +14,11 @@ import uk.gov.dwp.engineering.recruitment.exception.InvalidBookingException;
 import java.math.BigDecimal;
 
 import static org.mockito.Mockito.when;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static uk.gov.dwp.engineering.recruitment.CinemaConstants.MORE_INFANT_THAN_ADULT_MESSAGE;
 import static uk.gov.dwp.engineering.recruitment.CinemaConstants.NO_ADULT_MESSAGE;
-
-import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 
 
 @WebMvcTest(CinemaTicketsController.class)
